@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.andpad.jp/
+api: ANDPAD API
+base_url: https://api.andpad.jp/v1
+summary: >-
+  ANDPAD exposes its REST API to partners through the ANDPAD App Market (アプリマーケット). Partner
+  applications are authorized via OAuth and call api.andpad.jp with a bearer access token. The
+  full OAuth authorization/token endpoints, client-registration flow, and scope catalog are
+  gated behind the developer/partner program and are not published on the public site, so they
+  are not enumerated here (no fabrication).
+schemes:
+  - type: oauth2
+    name: andpad_app_market
+    detail: >-
+      OAuth2 partner-app authorization brokered through the ANDPAD App Market; access tokens are
+      presented as bearer credentials to api.andpad.jp/v1.
+    scopes_documented: false
+    endpoints_public: false
+evidence:
+  - source: https://developer.andpad.jp/
+    kind: developer portal (ANDPAD API / App Market integration program)
+  - source: https://api.andpad.jp/v1/self
+    kind: protected resource returns 404/JSON to unauthenticated callers
