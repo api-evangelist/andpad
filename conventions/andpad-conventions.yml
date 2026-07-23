@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Live observation of api.andpad.jp/v1 responses (2026-07-18) plus the ANDPAD Developers portal
+  (developer.andpad.jp). No public OpenAPI is published; these conventions are derived from
+  observed HTTP behavior and the developer program description, and reflect the unauthenticated
+  surface only.
+api: ANDPAD API
+base_url: https://api.andpad.jp/v1
+conventions:
+  authentication:
+    style: oauth2
+    detail: >-
+      Partner applications are authorized through the ANDPAD App Market (アプリマーケット) and call
+      api.andpad.jp with a bearer token. Full OAuth endpoints, scopes, and client registration
+      are gated behind the partner/developer program and are not publicly enumerated.
+    source: https://developer.andpad.jp/
+  versioning:
+    style: uri-path
+    detail: Major version is carried in the path (/v1/...).
+    observed_base: https://api.andpad.jp/v1
+  media_type:
+    request: application/json
+    response: application/json; charset=utf-8
+  response_envelope:
+    style: wrapped
+    shape: '{"data": { ... }}'
+    detail: >-
+      Successful and error payloads are wrapped in a top-level "data" object. Errors surface a
+      human-readable "message" field (e.g. {"data":{"message":"対象が存在しません。"}} for a 404).
+      This is NOT an RFC 9457 problem+json envelope. See errors/andpad-problem-types.yml.
+  request_tracing:
+    header: x-request-id
+    detail: Every response carries a server-generated x-request-id (UUID) for support/tracing.
+    observed: true
+  cors:
+    detail: 'Responses set the header vary: Accept, Origin; cross-origin requests are negotiated per Origin.'
+  caching:
+    detail: 'API responses send cache-control: no-cache and an x-cache edge indicator.'
+  security_headers:
+    strict_transport_security: 'max-age=63072000; includeSubDomains (observed on /v1 responses)'
+    x_content_type_options: nosniff
+    x_frame_options: SAMEORIGIN
+    referrer_policy: strict-origin-when-cross-origin
+    x_permitted_cross_domain_policies: none
+  pagination:
+    detail: Not observable from the unauthenticated surface; not documented publicly.
+    status: unknown
+  idempotency:
+    detail: No idempotency-key header is documented on the public surface.
+    status: unknown
+cross_references:
+  errors: errors/andpad-problem-types.yml
+  authentication: authentication/andpad-authentication.yml
+  domain_security: security/andpad-domain-security.yml

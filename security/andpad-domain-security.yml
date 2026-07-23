@@ -1,0 +1,26 @@
+generated: '2026-07-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: andpad.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 22 23:59:59 2027 GMT
+  hsts: false
+- host: developer.andpad.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 13 23:59:59 2026 GMT
+  hsts: false
+- host: api.andpad.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 22 23:59:59 2027 GMT
+  hsts: false
+domains:
+- domain: andpad.jp
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

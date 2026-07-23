@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ paths on ANDPAD hosts (2026-07-18)
+description: >-
+  Results of probing the /.well-known/ discovery surface for the ANDPAD hosts in apis.yml
+  (baseURL host api.andpad.jp, developer portal developer.andpad.jp) and the product host
+  andpad.jp. Status is the HTTP code observed at fetch time. Only documents that returned a
+  real, correctly-typed payload were saved verbatim. developer.andpad.jp is a Next.js static
+  SPA that answers 200 with an HTML shell for unknown /.well-known/ paths, so those are recorded
+  as present-but-not-a-real-document and not saved.
+hosts:
+  - host: https://andpad.jp
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/plain
+        file: andpad-security.txt
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api.andpad.jp
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://developer.andpad.jp
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML SPA shell, not a real OIDC document; not saved

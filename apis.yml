@@ -1,8 +1,15 @@
 aid: andpad
 name: ANDPAD
-description: 'ANDPAD is a company surfaced as a portfolio company of hongshan and added to the API Evangelist
-  network as a stub for enrichment. Sector: technology. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  ANDPAD (株式会社アンドパッド / ANDPAD Inc.) is Japan's leading cloud construction-management
+  and construction-DX platform, used by more than 260,000 companies and hundreds of thousands
+  of field and office users across new-build housing, renovation, specialty trades, general
+  contracting, and facilities management. The platform spans scheduling, photo and document
+  management, drawings, inspection checklists, chat, billing, and procurement, and exposes an
+  external REST API (api.andpad.jp) plus an app marketplace (ANDPAD App Market) so partners can
+  integrate their own services with ANDPAD. ANDPAD is backed by Hongshan (HongShan / Sequoia
+  China) and operates a public developer site, a system status page, and a published
+  security.txt disclosure channel.
 url: https://raw.githubusercontent.com/api-evangelist/andpad/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +17,100 @@ x-backed-by:
 - hongshan
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://andpad.jp/wp-content/uploads/OGP_top.jpg
 tags:
 - Company
 - Technology
-apis: []
+- Construction
+- Construction Management
+- Construction DX
+- SaaS
+- Project Management
+- Japan
+- API
+apis:
+- name: ANDPAD API
+  description: >-
+    ANDPAD's external REST API for integrating partner services with the ANDPAD construction
+    management platform via the ANDPAD App Market. Served from api.andpad.jp with a versioned
+    /v1 base path, JSON responses, and OAuth-based partner authorization. Responses use a
+    {"data": {...}} envelope and carry an x-request-id header for tracing.
+  humanURL: https://developer.andpad.jp/
+  baseURL: https://api.andpad.jp/v1
+  tags:
+  - Construction
+  - Project Management
+  - REST
+  properties:
+  - url: https://developer.andpad.jp/
+    type: DeveloperPortal
+  - url: https://developer.andpad.jp/docs
+    type: Documentation
+  - url: https://developer.andpad.jp/reference
+    type: APIReference
+  - url: conventions/andpad-conventions.yml
+    type: Conventions
+  - url: errors/andpad-problem-types.yml
+    type: ErrorCatalog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- url: https://developer.andpad.jp/
+  type: DeveloperPortal
+- url: https://developer.andpad.jp/docs
+  type: Documentation
+- url: https://developer.andpad.jp/reference
+  type: APIReference
+- url: https://appmarket.andpad.jp/
+  type: Integrations
+- url: https://andpad.jp/
+  type: Website
+- url: https://andpad.co.jp/
+  type: CompanyWebsite
+- url: https://andpad.co.jp/news/
+  type: Blog
+- url: https://andpad.jp/contacts/new
+  type: Support
+- url: https://status.andpad.jp/
+  type: StatusPage
+- url: https://hrmos.co/pages/andpad/jobs/140
+  type: Careers
+- url: https://andpad.jp/.well-known/security.txt
+  type: SecurityTxt
+- url: well-known/andpad-well-known.yml
+  type: WellKnown
+- url: security/andpad-domain-security.yml
+  type: DomainSecurity
+- url: security/andpad-vulnerability-disclosure.yml
+  type: VulnerabilityDisclosure
+- url: security/andpad-vulnerability-disclosure.yml
+  type: Security
+- url: authentication/andpad-authentication.yml
+  type: Authentication
+- url: conventions/andpad-conventions.yml
+  type: Conventions
+- url: errors/andpad-problem-types.yml
+  type: ErrorCatalog
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

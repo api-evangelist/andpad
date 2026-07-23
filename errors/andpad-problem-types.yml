@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Live observation of api.andpad.jp/v1 error responses (2026-07-18). No public OpenAPI or docs
+  error reference is available; this catalog captures the observed error envelope only.
+api: ANDPAD API
+format: custom
+format_note: >-
+  ANDPAD does NOT use RFC 9457 application/problem+json. Errors are returned as
+  application/json with the standard wrapped envelope {"data": {"message": "<human text>"}}.
+  Messages observed are Japanese. HTTP status codes carry the machine-readable signal.
+envelope:
+  content_type: application/json; charset=utf-8
+  shape: '{"data": {"message": "<string>"}}'
+  message_field: data.message
+problem_types:
+  - status: 404
+    observed_message: 対象が存在しません。
+    meaning: The requested resource does not exist (or is not visible to the caller).
+    remediation: >-
+      Verify the path and resource identifier; unauthenticated calls to protected resources
+      also surface as not-found. Authenticate as an authorized ANDPAD App Market partner.
+notes:
+  - Only the unauthenticated 404 surface was observable; 400/401/403/429/5xx bodies were not
+    captured because the API requires partner authorization.
+  - Every error response includes an x-request-id header useful when contacting ANDPAD support.
