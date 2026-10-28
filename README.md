@@ -64,6 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ANDPAD is a company surfaced as a portfolio company of hongshan and added to the API Evangelist network as a stub for enrichment. Sector: technology. This profile is a lead awaiting the enrichment pipeline.
+ANDPAD (株式会社アンドパッド / ANDPAD Inc.) is Japan's leading cloud construction-management and construction-DX platform, used by more than 260,000 companies and hundreds of thousands of field and office users across new-build housing, renovation, specialty trades, general contracting, and facilities management. The platform spans scheduling, photo and document management, drawings, inspection checklists, chat, billing, and procurement, and exposes an external REST API (api.andpad.jp) plus an app marketplace (ANDPAD App Market) so partners can integrate their own services with ANDPAD. ANDPAD is backed by Hongshan (HongShan / Sequoia China) and operates a public developer site, a system status page, and a published security.txt disclosure channel.
 
-Backed by: hongshan
+**Areas:** Company · Technology · Construction · Construction Management · Construction DX · Software-as-a-Service · Project Management · Japan
+
+## ANDPAD on APIs.io
+
+Everything profiled for ANDPAD is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/andpad/](https://apis.io/providers/andpad/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [ANDPAD API](https://apis.io/apis/andpad/andpad-api/) — ANDPAD's external REST API for integrating partner services with the ANDPAD construction management platform via the ANDPAD App Market. Served from…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Andpad Authentication](https://apis.io/security/andpad/andpad-authentication/)
+- [Andpad Domain Security](https://apis.io/security/andpad/andpad-domain-security/)
+- [Andpad Vulnerability Disclosure](https://apis.io/security/andpad/andpad-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://andpad.jp/)
+- [Documentation](https://developer.andpad.jp/docs)
+- [API reference](https://developer.andpad.jp/reference)
+- [Support](https://andpad.jp/contacts/new)
+- [Blog](https://andpad.co.jp/news/)
+- [Status](https://status.andpad.jp/)
+
+## API Evangelist rating
+
+**Kin Score 20.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 76.8 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 0.0 |
+
+**Agent readiness 3.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/andpad/](https://apis.io/providers/andpad/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ANDPAD: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/andpad/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
